@@ -8,9 +8,13 @@
 
 import UIKit
 import Parse
-class ChatViewController: UIViewController {
+class ChatViewController : UIViewController, UITableViewDataSource {
 
+    
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var chatMessageField: UITextField!
+    var messages: [PFObject] = []
+    
     @IBAction func sendMessageButton(_ sender: Any) {
         let chatMessage = PFObject(className: "Message_fbu2017")
         chatMessage["text"] = chatMessageField.text ?? ""
@@ -24,9 +28,22 @@ class ChatViewController: UIViewController {
         }
 
     }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return messages.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "chatMessage", for: indexPath) as! ChatCell
+
+        let message = messages[indexPath.row]
+        cell.message.text = message["text"] as? String
+        
+        return cell
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 
