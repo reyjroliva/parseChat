@@ -11,12 +11,12 @@
 		68E9FB5453769BE97B371FA6 /* Pods_parseChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FD86251C4CBCB72AF7F2189 /* Pods_parseChat.framework */; };
 		C8D81F617E741FC62BCB3BAA /* Pods_parseChatUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61248731F83AED5A8AA69D9A /* Pods_parseChatUITests.framework */; };
 		EF99FC521F01891D00491A31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF99FC511F01891D00491A31 /* AppDelegate.swift */; };
-		EF99FC541F01891D00491A31 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF99FC531F01891D00491A31 /* ViewController.swift */; };
 		EF99FC571F01891D00491A31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF99FC551F01891D00491A31 /* Main.storyboard */; };
 		EF99FC591F01891D00491A31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF99FC581F01891D00491A31 /* Assets.xcassets */; };
 		EF99FC5C1F01891D00491A31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF99FC5A1F01891D00491A31 /* LaunchScreen.storyboard */; };
 		EF99FC671F01891D00491A31 /* parseChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF99FC661F01891D00491A31 /* parseChatTests.swift */; };
 		EF99FC721F01891D00491A31 /* parseChatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF99FC711F01891D00491A31 /* parseChatUITests.swift */; };
+		EF99FC801F018F0400491A31 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF99FC7F1F018F0400491A31 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +46,6 @@
 		893A93E212F0770EA8530F3C /* Pods-parseChatUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-parseChatUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-parseChatUITests/Pods-parseChatUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EF99FC4E1F01891D00491A31 /* parseChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = parseChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF99FC511F01891D00491A31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EF99FC531F01891D00491A31 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EF99FC561F01891D00491A31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EF99FC581F01891D00491A31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF99FC5B1F01891D00491A31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,6 +56,7 @@
 		EF99FC6D1F01891D00491A31 /* parseChatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = parseChatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF99FC711F01891D00491A31 /* parseChatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = parseChatUITests.swift; sourceTree = "<group>"; };
 		EF99FC731F01891D00491A31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF99FC7F1F018F0400491A31 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F848E67BC9134B973E9E7DA8 /* Pods-parseChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-parseChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-parseChat/Pods-parseChat.release.xcconfig"; sourceTree = "<group>"; };
 		FEAB928ABE85CF176B10848A /* Pods_parseChatTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_parseChatTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -138,11 +138,11 @@
 			isa = PBXGroup;
 			children = (
 				EF99FC511F01891D00491A31 /* AppDelegate.swift */,
-				EF99FC531F01891D00491A31 /* ViewController.swift */,
 				EF99FC551F01891D00491A31 /* Main.storyboard */,
 				EF99FC581F01891D00491A31 /* Assets.xcassets */,
 				EF99FC5A1F01891D00491A31 /* LaunchScreen.storyboard */,
 				EF99FC5D1F01891D00491A31 /* Info.plist */,
+				EF99FC7F1F018F0400491A31 /* LoginViewController.swift */,
 			);
 			path = parseChat;
 			sourceTree = "<group>";
@@ -446,7 +446,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF99FC541F01891D00491A31 /* ViewController.swift in Sources */,
+				EF99FC801F018F0400491A31 /* LoginViewController.swift in Sources */,
 				EF99FC521F01891D00491A31 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -698,6 +698,7 @@
 				EF99FC781F01891D00491A31 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EF99FC791F01891D00491A31 /* Build configuration list for PBXNativeTarget "parseChatTests" */ = {
 			isa = XCConfigurationList;
@@ -706,6 +707,7 @@
 				EF99FC7B1F01891D00491A31 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EF99FC7C1F01891D00491A31 /* Build configuration list for PBXNativeTarget "parseChatUITests" */ = {
 			isa = XCConfigurationList;
@@ -714,6 +716,7 @@
 				EF99FC7E1F01891D00491A31 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
